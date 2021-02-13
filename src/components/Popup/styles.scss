@@ -1,0 +1,22 @@
+@import "../styles/fonts";
+@import "../styles/reset";
+@import "../styles/variables";
+
+body {
+  color: $black;
+  background-color: $greyWhite;
+}
+
+
+#popup {
+  min-width: 350px;
+  padding: 30px 20px;
+  background-color: grey;
+
+  button {
+    padding: 8px;
+    background-color: black;
+    border-radius: 32px;
+    color: white;
+  }
+}

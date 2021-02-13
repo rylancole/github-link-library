@@ -12,7 +12,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const viewsPath = path.join(__dirname, 'views');
-const sourcePath = path.join(__dirname, 'source');
+const sourcePath = path.join(__dirname, 'src');
 const destPath = path.join(__dirname, 'extension');
 const nodeEnv = process.env.NODE_ENV || 'development';
 const targetBrowser = process.env.TARGET_BROWSER;
@@ -59,10 +59,10 @@ module.exports = {
 
   entry: {
     manifest: path.join(sourcePath, 'manifest.json'),
-    background: path.join(sourcePath, 'Background', 'index.ts'),
-    contentScript: path.join(sourcePath, 'ContentScript', 'index.ts'),
-    popup: path.join(sourcePath, 'Popup', 'index.tsx'),
-    options: path.join(sourcePath, 'Options', 'index.tsx'),
+    background: path.join(sourcePath, 'scripts/background', 'index.ts'),
+    contentScript: path.join(sourcePath, 'scripts/content', 'index.ts'),
+    popup: path.join(sourcePath, 'components/Popup', 'index.tsx'),
+    options: path.join(sourcePath, 'components/Options', 'index.tsx'),
   },
 
   output: {

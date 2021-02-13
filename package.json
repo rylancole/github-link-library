@@ -1,13 +1,11 @@
 {
-  "name": "web-extension-starter",
+  "name": "pr-bookmark-generator",
   "version": "2.0.0",
-  "description": "Web extension starter using react and typescript",
+  "description": "Bookmark storage and generation for active Github PRs.",
   "private": true,
-  "repository": "https://github.com/abhijithvijayan/web-extension-starter.git",
+  "repository": "https://github.com/rylancole/pr-bookmark-generator.git",
   "author": {
-    "name": "abhijithvijayan",
-    "email": "email@abhijithvijayan.in",
-    "url": "https://abhijithvijayan.in"
+    "name": "rylancole"
   },
   "license": "MIT",
   "engines": {
@@ -28,7 +26,6 @@
   "dependencies": {
     "@babel/runtime": "^7.12.5",
     "advanced-css-reset": "^1.2.2",
-    "emoji-log": "^1.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "webext-base-css": "^1.2.0",
