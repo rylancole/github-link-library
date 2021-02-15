@@ -1,5 +1,9 @@
 @import "../../styles/variables";
 
 .settings-button {
+  color: $popup-toolbar-icon;
+  background-color: $popup-toolbar-background;
+  border: none;
   padding: 8px;
+  cursor: pointer;
 }

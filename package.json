@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
-    "@fortawesome/fontawesome-free": "^5.15.2",
     "advanced-css-reset": "^1.2.2",
     "axios": "^0.21.1",
     "react": "^17.0.1",

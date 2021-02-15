@@ -12,12 +12,11 @@ const SettingsButton: React.FC = () => {
     <button
       id="settings-button"
       className="settings-button"
-      type="button"
       onClick={(): Promise<Tabs.Tab> => {
         return openWebPage("options.html");
       }}
     >
-      Options Page
+      <i className="fa fa-cog fa-lg"></i>
     </button>
   );
 };

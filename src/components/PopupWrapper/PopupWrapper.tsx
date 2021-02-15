@@ -4,9 +4,9 @@ import "./styles.scss";
 
 const PopupWrapper: React.FC = ({ children }) => {
   return (
-    <div id="popup-" className="popup-wrapper">
+    <section id="popup-wrapper" className="popup-wrapper">
       {children}
-    </div>
+    </section>
   );
 };
 
