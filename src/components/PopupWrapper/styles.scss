@@ -1,0 +1,9 @@
+@import "../../styles/fonts";
+@import "../../styles/reset";
+@import "../../styles/variables";
+
+.popup-window {
+  min-width: 350px;
+  padding: 30px 20px;
+  background-color: grey;
+}

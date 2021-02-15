@@ -13,10 +13,36 @@ axios.defaults.headers.common["Accept"] =
 
 // get the project data as returned from api given the project name
 export async function getPRs() {
-  const query = `query { viewer { login }}`;
-  axios.post("/graphql", { query }).then((res) => {
-    console.log(res);
+  const query = `
+    query {
+      viewer {
+        pullRequests(last: 5, states: OPEN) {
+          nodes {
+            title
+            number
+            url 
+          }
+        }
+      }
+    }
+  `;
+  return axios.post("/graphql", { query }).then((res) => {
+    if (res && res.data) {
+      if (res.data.errors) {
+        return {
+          status: "error",
+          errors: res.data.errors,
+        };
+      } else if (res.data.data) {
+        return {
+          status: "ok",
+          data: res.data.data,
+        };
+      }
+    }
+    return {
+      status: "error",
+      errors: [{ message: "Error in getPRs()" }],
+    };
   });
-
-  return "getPRs() completed.";
 }
