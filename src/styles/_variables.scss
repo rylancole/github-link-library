@@ -6,6 +6,13 @@ $grey-60: #4a4a4f;
 $grey-90: #0c0c0d;
 
 // mapped colors
-$popup-background: $grey-60;
 $popup-toolbar-background: $grey-90;
 $popup-toolbar-icon: $grey-20;
+
+$popup-background: $grey-40;
+
+$list-link-button-backround: $grey-60;
+$list-link-button-content: $grey-20;
+
+// global scss variables
+$button-cursor: pointer;

@@ -1,11 +1,9 @@
 import * as React from "react";
-import { browser, Tabs } from "webextension-polyfill-ts";
+import { Tabs } from "webextension-polyfill-ts";
+
+import { openWebPage } from "../../utils";
 
 import "./styles.scss";
-
-function openWebPage(url: string): Promise<Tabs.Tab> {
-  return browser.tabs.create({ url });
-}
 
 const SettingsButton: React.FC = () => {
   return (
@@ -16,7 +14,7 @@ const SettingsButton: React.FC = () => {
         return openWebPage("options.html");
       }}
     >
-      <i className="fa fa-cog fa-lg"></i>
+      <i className="fa fa-cog fa-lg" aria-hidden="true"></i>
     </button>
   );
 };

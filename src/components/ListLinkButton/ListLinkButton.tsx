@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Tabs } from "webextension-polyfill-ts";
 import { openWebPage } from "../../utils";
 import "./styles.scss";
 
@@ -8,11 +9,16 @@ const ListLinkButton: React.FC<{
   url: string;
 }> = ({ key, url, title }) => {
   return (
-    <div className="list-link-button" key={key}>
-      <button onClick={() => openWebPage(url)}>
-        <p className="list-link-button-title">{title}</p>
-      </button>
-    </div>
+    <button
+      key={key}
+      className="list-link-button"
+      onClick={(): Promise<Tabs.Tab> => {
+        return openWebPage(url);
+      }}
+    >
+      <i className="fa fa-github fa-lg" aria-hidden="true"></i>
+      <p className="list-link-button-text">{title}</p>
+    </button>
   );
 };
 

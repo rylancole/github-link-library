@@ -8,9 +8,12 @@ interface Node {
   url: string;
 }
 
-const ListWrapper: React.FC<{ nodes: Node[] }> = ({ nodes }) => {
+const ListWrapper: React.FC<{ nodes: Node[]; id: string }> = ({
+  nodes,
+  id,
+}) => {
   return (
-    <div>
+    <div id={id} className="list-wrapper">
       {nodes?.map((node: { url: string; number: string; title: string }) => (
         <ListLinkButton key={node.number} url={node.url} title={node.title} />
       ))}

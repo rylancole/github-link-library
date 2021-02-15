@@ -4,9 +4,9 @@ import { SettingsButton } from "..";
 
 import "./styles.scss";
 
-const Toolbar: React.FC = () => {
+const Toolbar: React.FC<{ id: string }> = ({ id }) => {
   return (
-    <div id="toolbar" className="toolbar">
+    <div id={id} className="toolbar">
       <SettingsButton />
     </div>
   );

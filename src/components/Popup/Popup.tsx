@@ -18,8 +18,8 @@ const Popup: React.FC = () => {
 
   return (
     <PopupWrapper>
-      <Toolbar />
-      <ListWrapper nodes={prNodes} />
+      <Toolbar id="toolbar" />
+      <ListWrapper id="pull-request-list" nodes={prNodes} />
     </PopupWrapper>
   );
 };

@@ -1,16 +1,18 @@
 @import "../../styles/variables";
 
 .list-link-button {
-  background-color: white;
-  border: 2px solid green;
-  padding: 8px;
-  margin: 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
-  .list-link-button-a {
-    border: 2px solid black;
-    .list-link-button-title {
-      color: green;
-      border: 2px solid red;
-    }
+  background-color: $list-link-button-backround;
+  color: $list-link-button-content;
+  border: none;
+  padding: 8px;
+  margin: 2px 4px;
+  cursor: $button-cursor;
+
+  .list-link-button-text {
+    margin: 0px 8px;
   }
 }
