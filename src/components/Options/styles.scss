@@ -1,6 +1,19 @@
 @import "../../styles/variables";
 
 body {
-  color: #fff;
-  background-color: $grey-40;
+  color: $options-text;
+  background-color: $options-background;
+
+  min-height: 100vh;
+
+  margin: 0px;
+}
+
+.options-panel {
+  margin: 8px 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0px 8px 8px $options-foreground;
+  min-height: 100;
+  background-color: $options-foreground;
 }

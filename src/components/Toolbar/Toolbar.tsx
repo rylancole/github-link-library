@@ -1,13 +1,11 @@
 import * as React from "react";
 
-import { SettingsButton } from "..";
-
 import "./styles.scss";
 
-const Toolbar: React.FC<{ id: string }> = ({ id }) => {
+const Toolbar: React.FC<{ id: string }> = ({ id, children }) => {
   return (
     <div id={id} className="toolbar">
-      <SettingsButton />
+      {children}
     </div>
   );
 };

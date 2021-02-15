@@ -4,3 +4,8 @@ body {
   background-color: $popup-toolbar-background;
   margin: 0px;
 }
+
+.popup {
+  min-width: 350px;
+  background-color: $popup-background;
+}
