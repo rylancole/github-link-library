@@ -1,9 +1,9 @@
 {
-  "name": "pr-bookmark-generator",
-  "version": "2.0.0",
-  "description": "Bookmark storage and generation for active Github PRs.",
+  "name": "github-link-library",
+  "version": "0.1.0",
+  "description": "Library of links to active Github PRs, conveniently in your toolbar.",
   "private": true,
-  "repository": "https://github.com/rylancole/pr-bookmark-generator.git",
+  "repository": "https://github.com/rylancole/github-link-library.git",
   "author": {
     "name": "rylancole"
   },

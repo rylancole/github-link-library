@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "PR Bookmark Generator",
+  "name": "GitHub Link Library",
   "version": "0.0.0",
 
   "icons": {
@@ -9,9 +9,9 @@
     "48": "assets/icons/favicon-48.png",
     "128": "assets/icons/favicon-128.png"
   },
-  "description": "Bookmark storage and generation for active Github PRs.",
-  "homepage_url": "https://github.com/abhijithvijayan/web-extension-starter",
-  "short_name": "PR Bookmarks",
+  "description": "Library of links to active Github PRs, conveniently in your toolbar.",
+  "homepage_url": "https://github.com/rylancole/github-link-library.git",
+  "short_name": "GH Link Library",
 
   "permissions": [
     "activeTab",
@@ -44,7 +44,7 @@
       "48": "assets/icons/favicon-48.png",
       "128": "assets/icons/favicon-128.png"
     },
-    "default_title": "PR Bookmarks",
+    "default_title": "GitHub Link Library",
     "__chrome|opera__chrome_style": false,
     "__firefox__browser_style": false
   },
