@@ -6,7 +6,7 @@ import "./styles.scss";
 
 const Toolbar: React.FC = () => {
   return (
-    <div>
+    <div id="toolbar" className="toolbar">
       <SettingsButton />
     </div>
   );

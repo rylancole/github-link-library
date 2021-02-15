@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { PopupWrapper, Toolbar } from "..";
+import { ListWrapper, PopupWrapper, Toolbar } from "..";
 import { getPRs } from "../../api";
 
 import "./styles.scss";
@@ -19,13 +19,7 @@ const Popup: React.FC = () => {
   return (
     <PopupWrapper>
       <Toolbar />
-      <div>
-        {prNodes.map((node: { url: string; number: string; title: string }) => (
-          <div key={node.number}>
-            <a href={node.url}>{node.title}</a>
-          </div>
-        ))}
-      </div>
+      <ListWrapper nodes={prNodes} />
     </PopupWrapper>
   );
 };
