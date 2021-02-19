@@ -24,6 +24,24 @@ export async function getPRs() {
           }
         }
       }
+      themis: repository(owner: "clio", name:"themis") { 
+        issues(first: 100, orderBy: { field:CREATED_AT, direction:ASC }, states: OPEN, filterBy: { assignee: "rylancole" }){
+          nodes {
+            title
+            number
+            url
+          }
+        }
+      }
+      grow: repository(owner: "clio", name:"grow") { 
+        issues(first: 100, orderBy: { field:CREATED_AT, direction:ASC }, states: OPEN, filterBy: { assignee: "rylancole" }){
+          nodes {
+            title
+            number
+            url
+          }
+        }
+      }
     }
   `;
   return axios.post("/graphql", { query }).then((res) => {
