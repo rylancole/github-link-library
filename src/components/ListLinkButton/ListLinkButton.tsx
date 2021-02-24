@@ -7,7 +7,8 @@ const ListLinkButton: React.FC<{
   key: string;
   title: string;
   url: string;
-}> = ({ key, url, title }) => {
+  numApprovals?: number;
+}> = ({ key, url, title, numApprovals }) => {
   return (
     <button
       key={key}
@@ -16,8 +17,13 @@ const ListLinkButton: React.FC<{
         return openWebPage(url);
       }}
     >
-      <i className="fa fa-github fa-lg" aria-hidden="true"></i>
-      <p className="list-link-button-text">{title}</p>
+      <div className="left">
+        <i className="fa fa-github fa-lg" aria-hidden="true"></i>
+        <p className="list-link-button-text">{title}</p>
+      </div>
+      <div className="right">
+        <p>{numApprovals}</p>
+      </div>
     </button>
   );
 };

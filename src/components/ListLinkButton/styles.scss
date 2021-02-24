@@ -2,7 +2,7 @@
 
 .list-link-button {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 
   background-color: $list-link-button-background;
@@ -11,6 +11,12 @@
   padding: 8px;
   margin: 2px 4px;
   cursor: $button-cursor;
+
+  .left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
   .list-link-button-text {
     margin: 0px 8px;

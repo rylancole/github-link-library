@@ -16,11 +16,14 @@ export async function getPRs() {
   const query = `
     query {
       viewer {
-        pullRequests(last: 5, states: OPEN) {
+        pullRequests(last: 10, states: OPEN) {
           nodes {
             title
             number
             url 
+            reviews(last: 10, states:APPROVED) {
+              totalCount
+            }
           }
         }
       }
