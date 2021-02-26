@@ -18,6 +18,19 @@
     align-items: center;
   }
 
+  .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .right-text {
+      margin: 0px;
+      padding: 0px 4px;
+    }
+
+    
+  }
+
   .list-link-button-text {
     margin: 0px 8px;
   }

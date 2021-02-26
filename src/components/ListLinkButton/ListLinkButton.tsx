@@ -3,6 +3,12 @@ import { Tabs } from "webextension-polyfill-ts";
 import { openWebPage } from "../../utils";
 import "./styles.scss";
 
+const MAX_TITLE_LENGTH = 30
+
+const chopTitle = (title: string) => {
+  return (title.length > MAX_TITLE_LENGTH) ? title.substring(0, MAX_TITLE_LENGTH - 3) + "..." : title;
+}
+
 const ListLinkButton: React.FC<{
   key: string;
   title: string;
@@ -20,13 +26,13 @@ const ListLinkButton: React.FC<{
     >
       <div className="left">
         <i className="fa fa-github fa-lg" aria-hidden="true"></i>
-        <p className="list-link-button-text">{title}</p>
+        <p className="list-link-button-text">{chopTitle(title)}</p>
       </div>
       <div className="right">
         {
-          (commitNode) && commitNode.commit.status.state
+          (commitNode) && commitNode.commit.status.state[0]
         }
-        <p>{numApprovals}</p>
+        <p className="right-text">{numApprovals}</p>
       </div>
     </button>
   );
