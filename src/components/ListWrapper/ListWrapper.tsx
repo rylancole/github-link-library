@@ -9,6 +9,7 @@ interface Node {
   reviews?: {
     totalCount: number;
   };
+  commits?: any;
 }
 
 const ListWrapper: React.FC<{ nodes: Node[]; id: string }> = ({
@@ -23,6 +24,7 @@ const ListWrapper: React.FC<{ nodes: Node[]; id: string }> = ({
           url={node.url}
           title={node.title}
           numApprovals={node.reviews?.totalCount}
+          commitNode={node.commits?.nodes[0]}
         />
       ))}
     </div>

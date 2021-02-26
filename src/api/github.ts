@@ -24,6 +24,15 @@ export async function getPRs() {
             reviews(last: 10, states:APPROVED) {
               totalCount
             }
+            commits(last: 1) {
+              nodes {
+                commit {
+                  status {
+                    state
+                  }
+                }
+              } 
+            }
           }
         }
       }

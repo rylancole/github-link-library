@@ -8,10 +8,11 @@ const ListLinkButton: React.FC<{
   title: string;
   url: string;
   numApprovals?: number;
-}> = ({ key, url, title, numApprovals }) => {
+  commitNode?: any;
+}> = ({ url, title, numApprovals, commitNode }) => {
+
   return (
     <button
-      key={key}
       className="list-link-button"
       onClick={(): Promise<Tabs.Tab> => {
         return openWebPage(url);
@@ -22,6 +23,9 @@ const ListLinkButton: React.FC<{
         <p className="list-link-button-text">{title}</p>
       </div>
       <div className="right">
+        {
+          (commitNode) && commitNode.commit.status.state
+        }
         <p>{numApprovals}</p>
       </div>
     </button>
