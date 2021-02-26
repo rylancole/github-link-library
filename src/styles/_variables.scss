@@ -6,11 +6,9 @@ $dark-grey: #24292e;
 $blue: #0366d6;
 $black: #24292e;
 
-$grey-20: #ededf0;
-$grey-30: #d7d7db;
-$grey-40: #b1b1b3;
-$grey-60: #4a4a4f;
-$grey-90: #0c0c0d;
+$green: #34d058;
+$yellow: #f9c513;
+$red: #d73a49;
 
 // mapped colors
 $popup-toolbar-background: $dark-grey;
@@ -20,6 +18,10 @@ $popup-background: $off-white;
 
 $list-link-button-background: $white;
 $list-link-button-content: $blue;
+
+$status-success: $green;
+$status-pending: $yellow;
+$status-failure: $red;
 
 $options-background: $off-white;
 $options-foreground: $white;

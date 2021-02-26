@@ -1,13 +1,13 @@
 @import "../../styles/variables";
 
 .SUCCESS {
-    color: green;
+    color: $status-success;
 }
 
 .PENDING {
-    color: yellow;
+    color: $status-pending;
 }
 
 .FAILURE {
-    color: red;
+    color: $status-failure;
 }
