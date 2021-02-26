@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { ListWrapper, Toolbar, SettingsButton } from "..";
+import { Headline, ListWrapper, Toolbar, SettingsButton } from "..";
 import { getPRs } from "../../api";
 
 import "./styles.scss";
@@ -25,12 +25,11 @@ const Popup: React.FC = () => {
       <Toolbar id="popup-toolbar">
         <SettingsButton />
       </Toolbar>
-      Open PRs
+      <Headline id="pr-headline">Open PRs</Headline>
       <ListWrapper id="pull-request-list" nodes={prNodes} />
-      Themis Issues
-      <ListWrapper id="pull-request-list" nodes={thIssueNodes} />
-      Grow Issues
-      <ListWrapper id="pull-request-list" nodes={grIssueNodes} />
+      <Headline id="pr-headline">Issues</Headline>
+      <ListWrapper id="themis-issue-list" nodes={thIssueNodes} />
+      <ListWrapper id="grow-issue-list" nodes={grIssueNodes} />
     </div>
   );
 };

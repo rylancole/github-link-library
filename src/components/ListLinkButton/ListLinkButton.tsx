@@ -26,7 +26,7 @@ const ListLinkButton: React.FC<{
     >
       <div className="left">
         <i className="fa fa-github fa-lg" aria-hidden="true"></i>
-        <p className="list-link-button-text">{chopTitle(title)}</p>
+        <strong className="list-link-button-text">{chopTitle(title)}</strong>
       </div>
       <div className="right">
         {

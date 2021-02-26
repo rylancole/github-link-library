@@ -6,7 +6,6 @@
   align-items: center;
 
   background-color: $list-link-button-background;
-  color: $list-link-button-content;
   border: none;
   padding: 8px;
   margin: 2px 4px;
@@ -27,11 +26,10 @@
       margin: 0px;
       padding: 0px 4px;
     }
-
-    
   }
 
   .list-link-button-text {
+    color: $list-link-button-content;
     margin: 0px 8px;
   }
 }
