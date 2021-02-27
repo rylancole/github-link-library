@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Tabs } from "webextension-polyfill-ts";
 import { openWebPage } from "../../utils";
-import { StatusIcon } from '..'
+import { ApprovalIcons, StatusIcon } from '..'
 import "./styles.scss";
 
 const MAX_TITLE_LENGTH = 30
@@ -30,10 +30,8 @@ const ListLinkButton: React.FC<{
         <strong className="list-link-button-text">{chopTitle(title)}</strong>
       </div>
       <div className="right">
-        {
-          (commitNode) && <StatusIcon state={commitNode.commit.status.state} />
-        }
-        <p className="right-text">{numApprovals}</p>
+        <ApprovalIcons count={numApprovals} />
+        {(commitNode) && <StatusIcon state={commitNode.commit.status.state} />}
       </div>
     </button>
   );
