@@ -6,6 +6,9 @@ interface Node {
   number: string;
   title: string;
   url: string;
+  repository: {
+    name: string;
+  };
   reviews?: {
     totalCount: number;
   };
@@ -25,6 +28,7 @@ const ListWrapper: React.FC<{ nodes: Node[]; id: string }> = ({
           title={node.title}
           numApprovals={node.reviews?.totalCount}
           commitNode={node.commits?.nodes[0]}
+          repoName={node.repository.name}
         />
       ))}
     </div>

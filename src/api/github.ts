@@ -24,6 +24,9 @@ export async function getPRs() {
             reviews(last: 10, states:APPROVED) {
               totalCount
             }
+            repository {
+              name
+            }
             commits(last: 1) {
               nodes {
                 commit {
@@ -42,6 +45,9 @@ export async function getPRs() {
             title
             number
             url
+            repository {
+              name
+            }
           }
         }
       }
@@ -51,6 +57,9 @@ export async function getPRs() {
             title
             number
             url
+            repository {
+              name
+            }
           }
         }
       }

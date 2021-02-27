@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Tabs } from "webextension-polyfill-ts";
 import { openWebPage } from "../../utils";
-import { ApprovalIcons, StatusIcon } from '..'
+import { ApprovalIcons, RepoIcon, StatusIcon } from '..'
 import "./styles.scss";
 
 const MAX_TITLE_LENGTH = 30
@@ -14,9 +14,10 @@ const ListLinkButton: React.FC<{
   key: string;
   title: string;
   url: string;
+  repoName: string,
   numApprovals?: number;
   commitNode?: any;
-}> = ({ url, title, numApprovals, commitNode }) => {
+}> = ({ url, title, repoName, numApprovals, commitNode }) => {
 
   return (
     <button
@@ -26,7 +27,7 @@ const ListLinkButton: React.FC<{
       }}
     >
       <div className="left">
-        <i className="fa fa-github fa-lg" aria-hidden="true"></i>
+        <RepoIcon repoName={repoName} />
         <strong className="list-link-button-text">{chopTitle(title)}</strong>
       </div>
       <div className="right">
