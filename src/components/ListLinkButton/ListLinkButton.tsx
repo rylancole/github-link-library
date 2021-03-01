@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Tabs } from "webextension-polyfill-ts";
 import { openWebPage } from "../../utils";
-import { ApprovalIcons, RepoIcon, StatusIcon } from '..'
+import { ApprovalIcons, CopyButton, RepoIcon, StatusIcon } from '..'
 import "./styles.scss";
 
 const MAX_TITLE_LENGTH = 30
@@ -20,21 +20,25 @@ const ListLinkButton: React.FC<{
 }> = ({ url, title, repoName, numApprovals, commitNode }) => {
 
   return (
-    <button
-      className="list-link-button"
-      onClick={(): Promise<Tabs.Tab> => {
-        return openWebPage(url);
-      }}
-    >
-      <div className="left">
-        <RepoIcon repoName={repoName} />
-        <strong className="list-link-button-text">{chopTitle(title)}</strong>
-      </div>
-      <div className="right">
-        <ApprovalIcons count={numApprovals} />
-        {(commitNode) && <StatusIcon state={commitNode.commit.status.state} />}
-      </div>
-    </button>
+    <div className="list-link-div">
+      <button
+        className="list-link-button"
+        onClick={(): Promise<Tabs.Tab> => {
+          return openWebPage(url);
+        }}
+      >
+        <div className="left">
+          <RepoIcon repoName={repoName} />
+          <strong className="list-link-button-text">{chopTitle(title)}</strong>
+        </div>
+        <div className="right">
+          <ApprovalIcons count={numApprovals} />
+          {(commitNode) && <StatusIcon state={commitNode.commit.status.state} />}
+
+        </div>
+      </button>
+      <CopyButton url={url} />
+    </div>
   );
 };
 

@@ -1,0 +1,9 @@
+@import "../../styles/variables";
+
+.copy-button {
+    color: $black;
+    background-color: $list-link-button-background;
+    border: none;
+    padding: 8px;
+    cursor: $button-cursor;
+  }

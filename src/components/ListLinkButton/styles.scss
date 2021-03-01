@@ -1,35 +1,43 @@
 @import "../../styles/variables";
 
-.list-link-button {
+.list-link-div {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   background-color: $list-link-button-background;
-  border: none;
   padding: 8px;
   margin: 2px 4px;
-  cursor: $button-cursor;
 
-  .left {
+
+  .list-link-button {
     display: flex;
-    justify-content: flex-start;
+    flex-grow: 2;
+    justify-content: space-between;
     align-items: center;
-  }
-
-  .right {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    .right-text {
-      margin: 0px;
-      padding: 0px 4px;
+  
+    background-color: $list-link-button-background;
+    border: none;
+    cursor: $button-cursor;
+  
+    .left {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  
+    .right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  
+      .right-text {
+        margin: 0px;
+        padding: 0px 4px;
+      }
+    }
+  
+    .list-link-button-text {
+      color: $list-link-button-content;
+      margin: 0px 8px;
     }
   }
-
-  .list-link-button-text {
-    color: $list-link-button-content;
-    margin: 0px 8px;
-  }
+  
 }
