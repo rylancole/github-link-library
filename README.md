@@ -34,3 +34,7 @@ yarn run build
 ```
 Go to the developer settings of your browser and load as a temporary extension from `/extension`
 
+## Screenshots
+
+![Screen Shot 2021-03-01 at 9 06 26 AM](https://user-images.githubusercontent.com/35235782/109531998-75203100-7a6d-11eb-930d-34f6d13f7238.png)
+
