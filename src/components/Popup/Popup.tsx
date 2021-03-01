@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Headline, ListWrapper, Toolbar, SettingsButton } from "..";
+import { Headline, ListWrapper, ProjectButton, Toolbar, SettingsButton } from "..";
 import { getPRs } from "../../api";
 
 import "./styles.scss";
@@ -23,6 +23,7 @@ const Popup: React.FC = () => {
   return (
     <div className="popup">
       <Toolbar id="popup-toolbar">
+        <ProjectButton />
         <SettingsButton />
       </Toolbar>
       <Headline id="pr-headline">Open PRs</Headline>
