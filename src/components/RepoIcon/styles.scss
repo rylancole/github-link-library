@@ -1,1 +1,8 @@
 @import "../../styles/variables";
+
+$icon-size: 16px;
+
+.repo-icon {
+    max-width: $icon-size;
+    max-height: $icon-size;
+}
